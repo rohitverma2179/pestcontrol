@@ -12,7 +12,7 @@ const PromoBanner = () => {
                             Exclusive Seasonal Offer
                         </span>
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight mb-5">
-                            Get Your First Pest Control Treatment FREE! Guard Your Home Today
+                            Get Your First Pest Control Treatment  Guard Your Home Today
                         </h2>
                         <p className="text-lg opacity-90 mb-10">
                             Stop waiting for the infestation to grow. Contact our experts now and get a comprehensive inspection and your first basic treatment at absolutely no cost!
