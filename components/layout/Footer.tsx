@@ -108,6 +108,12 @@ const Footer = () => {
                     <p className="text-gray-500 text-xs italic">
                         © {new Date().getFullYear()} FIT India Pest Control Services x DeemakRoko. All Rights Reserved.
                     </p>
+                    <p>
+                        Developed by{' '}
+                        <p  className="text-gray-500 text-sm hover:text-white transition-colors flex items-center gap-1">
+                            Rohit Verma <ExternalLink size={12} />
+                        </p>
+                    </p>
                     <div className="flex gap-8">
                         <Link href="#" className="text-gray-500 text-xs hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="#" className="text-gray-500 text-xs hover:text-white transition-colors">Terms of Service</Link>

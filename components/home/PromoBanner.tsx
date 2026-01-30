@@ -28,7 +28,7 @@ const PromoBanner = () => {
                                     { val: '00', label: 'M' },
                                     { val: '00', label: 'S' }
                                 ].map((item, idx) => (
-                                    <div key={idx} className="bg-white/10 p-3 rounded-lg text-center min-w-[60px] font-bold">
+                                    <div key={idx} className="bg-white/10 p-3 rounded-lg text-center min-w-15 font-bold">
                                         <span className="block text-2xl">{item.val}</span>
                                         <span className="text-[10px] uppercase opacity-70">{item.label}</span>
                                     </div>
