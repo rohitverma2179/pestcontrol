@@ -5,12 +5,12 @@ import { Plus, Minus, Send } from 'lucide-react';
 
 const faqs = [
     {
-        question: "What is DeemakRoko's Anti-Termite Piping System?",
+        question: "What is Fit India Anti-Termite Piping System?",
         answer: "It is a specialized network of porous pipes installed under the floor or along the walls during construction. It allows for easy recharging of termite chemicals (like Bayer) without any drilling or damage to your flooring, providing lifetime protection."
     },
     {
-        question: "Is FIT India Pest Control government approved?",
-        answer: "Yes, FIT India Pest Control Services is a government-approved company with License No: 2358. We operate strictly under government safety guidelines and use only safe, eco-friendly chemicals."
+        question: "Is Fit India Pest Control government approved?",
+        answer: "Yes, Fit India Pest Control Services is a government-approved company with License No: 2358. We operate strictly under government safety guidelines and use only safe, eco-friendly chemicals."
     },
     {
         question: "What is the 'Drill-Fill-Seal' treatment?",
@@ -22,6 +22,10 @@ const faqs = [
     }
 ];
 
+
+
+
+
 const FAQ = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -31,7 +35,7 @@ const FAQ = () => {
                 <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-24">
                     <div className="flex-[1.4]">
                         <span className="sub-title">Got Any Questions?</span>
-                        <h2 className="section-title">Knowledge Base & FAQ</h2>
+                        <h2  className="section-title">Knowledge Base & FAQ</h2>
                         <div className="mt-12 space-y-4">
                             {faqs.map((faq, index) => (
                                 <div
@@ -100,7 +104,6 @@ const FAQ = () => {
                 </div>
             </div>
 
-            {/* Decorative Blur */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
         </section>

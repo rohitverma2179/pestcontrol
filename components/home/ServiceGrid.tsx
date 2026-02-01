@@ -48,7 +48,7 @@ const ServiceGrid = () => {
                         <span className="sub-title">Expert Termite & Pest Solutions</span>
                         <h2 className="section-title">Specialized Services for Every Need</h2>
                         <p className="text-text-light text-lg">
-                            Combining DeemakRoko's termite expertise with FIT India's comprehensive pest management systems.
+                            Combining Fit India's termite expertise with Fit India's comprehensive pest management systems.
                         </p>
                     </div>
                     <button className="btn-primary shadow-xl">Explore All Services</button>

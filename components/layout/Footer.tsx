@@ -30,7 +30,7 @@ const Footer = () => {
 
                     <div>
                         <h3 className="text-xl font-black mb-10 relative inline-block">
-                            DeemakRoko Services
+                            Deemak Control Services
                             <div className="absolute -bottom-2 left-0 w-12 h-1 bg-primary rounded-full"></div>
                         </h3>
                         <ul className="space-y-4">
@@ -106,7 +106,7 @@ const Footer = () => {
 
                 <div className="border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-gray-500 text-xs italic">
-                        © {new Date().getFullYear()} FIT India Pest Control Services x DeemakRoko. All Rights Reserved.
+                        © {new Date().getFullYear()} FIT India Pest Control Services x Fit India. All Rights Reserved.
                     </p>
                     <p>
                         Developed by{' '}

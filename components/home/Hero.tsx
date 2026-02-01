@@ -12,17 +12,16 @@ const slides = [
         title: "Best <span class='text-primary'>Pest Control Gurgaon</span> for Healthy Living",
         description: "Official Fit India Pest Control (License No: 2358). Trusted exterminator in Gurgaon using Bayer's safe chemicals to protect your family from harmful pests.",
         image: "/images/pest-control-technician-expert-service.png",
-        // image: "https://images.unsplash.com/photo-1540513133343-41e8f6645383?q=80&w=1600&auto=format&fit=crop",
         alt: "Fit India Pest Control expert technician providing eco-friendly treatment in Gurgaon",
         cta: "Book Inspection"
     },
     {
         id: 2,
-        subTitle: "DeemakRoko - Architect's 1st Choice",
+        subTitle: "Fit India Termite Treatment - Architect's 1st Choice",
         title: "#1 <span class='text-primary'>Termite Treatment Delhi</span> & NCR",
         description: "India's premier termite exterminator with over 10 years of experience. Providing innovative Anti-Termite Piping and Drill-Fill-Seal solutions across Delhi.",
         image: "/images/termite-protection-treatment-service.png",
-        alt: "DeemakRoko professional termite protection and treatment service in Delhi",
+        alt: "Fit India Termite Treatment professional termite protection and treatment service in Delhi",
         cta: "Save 12% Now"
     },
     {
@@ -133,7 +132,6 @@ const Hero = () => {
                 </motion.div>
             </AnimatePresence>
 
-            {/* Navigation Buttons */}
             <div className="absolute bottom-10 right-10 flex gap-4 z-20">
                 <button
                     onClick={prevSlide}
@@ -149,7 +147,6 @@ const Hero = () => {
                 </button>
             </div>
 
-            {/* Pagination Dots */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-20">
                 {slides.map((_, i) => (
                     <button
@@ -160,7 +157,6 @@ const Hero = () => {
                 ))}
             </div>
 
-            {/* Background Decor */}
             <div className="absolute top-20 left-10 text-4xl opacity-10 select-none">🕷️</div>
             <div className="absolute bottom-20 right-10 text-4xl opacity-10 select-none animate-pulse">🦟</div>
         </section>

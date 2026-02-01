@@ -11,7 +11,8 @@ const services = [
       "Super-fast Recharging",
       "Compatible to all Construction Designs"
     ],
-    offer: "12% Discount (For next 10 Days Booking ONLY)"
+    offer: "12% Discount (For next 10 Days Booking ONLY)",
+    image: "/images/termite-protection-treatment-service.png"
   },
   {
     title: "Drill Fill Seal Termite Treatment",
@@ -24,7 +25,8 @@ const services = [
       "Multi-Year Warranty",
       "Totally Affordable Prices"
     ],
-    offer: "8% Discount (For next 10 Days Booking ONLY)"
+    offer: "8% Discount (For next 10 Days Booking ONLY)",
+    image: "/images/professional-bed-bug-removal.png"
   },
   {
     title: "Soil Treatment",
@@ -38,7 +40,8 @@ const services = [
       "Residual Effect Method",
       "Affordable Prices"
     ],
-    offer: "5% Discount (For next 10 Days Booking ONLY)"
+    offer: "5% Discount (For next 10 Days Booking ONLY)",
+    image: "/images/pest-control-technician-expert-service.png"
   },
   {
     title: "Termite Pipes Refill Service",
@@ -51,7 +54,8 @@ const services = [
       "Post Refill Warranty",
       "Custom Packages Available"
     ],
-    offer: "8% Discount (For next 10 Days Booking ONLY)"
+    offer: "8% Discount (For next 10 Days Booking ONLY)",
+    image: "/images/certified-pest-control-specialist.png"
   },
   {
     title: "Spot Treatment",
@@ -63,7 +67,8 @@ const services = [
       "Recommended for External Furniture",
       "Oil Based Solution"
     ],
-    offer: "No Current Offer"
+    offer: "No Current Offer",
+    image: "/images/cockroach-pest-management-system.png"
   },
   {
     title: "Inspection & Consultation Visit",
@@ -74,7 +79,8 @@ const services = [
       "Deep Assessment",
       "Custom Treatment Plan"
     ],
-    offer: "Consultation Based"
+    offer: "Consultation Based",
+    image: "/images/mosquito-control-prevention-safety.png"
   }
 ];
 
@@ -95,34 +101,49 @@ const Team = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all"
+              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-all h-full flex flex-col"
             >
-              <h3 className="text-xl font-bold mb-1">{service.title}</h3>
-              <p className="text-primary font-semibold mb-3">
-                {service.tagline}
-              </p>
+              <div className="relative h-48 w-full group">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
 
-              {service.badge.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {service.badge.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold"
-                    >
-                      {tag}
-                    </span>
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="text-xl font-bold mb-1">{service.title}</h3>
+                <p className="text-primary font-semibold mb-3">
+                  {service.tagline}
+                </p>
+
+                {service.badge.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {service.badge.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="text-xs bg-primary/10 text-primary px-3 py-1 rounded-full font-semibold"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                <ul className="space-y-2 text-sm text-text-light mb-5 flex-1">
+                  {service.points.map((point, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <span className="text-primary mt-0.5">✔</span>
+                      <span>{point}</span>
+                    </li>
                   ))}
+                </ul>
+
+                <div className="bg-green-50 text-green-700 text-sm font-bold p-3 rounded-lg text-center mt-auto">
+                  {service.offer}
                 </div>
-              )}
-
-              <ul className="space-y-2 text-sm text-text-light mb-5">
-                {service.points.map((point, i) => (
-                  <li key={i}>✔ {point}</li>
-                ))}
-              </ul>
-
-              <div className="bg-green-50 text-green-700 text-sm font-bold p-3 rounded-lg text-center">
-                {service.offer}
               </div>
             </div>
           ))}

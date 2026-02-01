@@ -10,7 +10,7 @@ const coreValues = [
     {
         icon: <Users className="text-primary" size={24} />,
         title: "10+ Years Expert Team",
-        text: "DeemakRoko brings together biologists and structural engineers for absolute protection."
+        text: "Fit India brings together biologists and structural engineers for absolute protection."
     },
     {
         icon: <Award className="text-primary" size={24} />,
@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
                         <span className="sub-title">India's Premier Protection Team</span>
                         <h2 className="section-title">Your Trusted Partner in Advanced Pest & Termite Treatment</h2>
                         <p className="text-text-light text-lg mb-8 leading-relaxed">
-                            Welcome to the union of <strong>DeemakRoko</strong> and <strong>FIT India Pest Control</strong>. With over a decade of excellence, our team of highly trained technicians is backed by expert biologists and structural engineers. We don't just kill pests; we eliminate the root cause.
+                            Welcome to the union of <strong></strong> and <strong>FIT India Termite Treatment</strong>. With over a decade of excellence, our team of highly trained technicians is backed by expert biologists and structural engineers. We don't just kill pests; we eliminate the root cause.
                         </p>
 
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
