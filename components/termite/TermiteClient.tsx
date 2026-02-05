@@ -30,7 +30,7 @@ const TermiteClient = () => {
             <RunningLine />
             <main id="main-content" className="bg-white">
                 {/* Hero Section */}
-                <header className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden bg-text-dark">
+                <header className="relative h-[60vh] min-h-125 flex items-center overflow-hidden bg-text-dark">
                     <div className="absolute inset-0 opacity-40">
                         <Image
                             src="/images/termite-protection-treatment-service.png"
@@ -49,7 +49,7 @@ const TermiteClient = () => {
                             transition={{ duration: 0.8 }}
                             className="max-w-3xl"
                         >
-                            <span className="sub-title !text-secondary !after:bg-secondary">Premium Termite Protection</span>
+                            <span className="sub-title text-secondary !after:bg-secondary">Premium Termite Protection</span>
                             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-[1.1]">
                                 Expert Termite <br />
                                 <span className="text-secondary">Treatment Cost</span> Guide
@@ -339,7 +339,7 @@ const TermiteClient = () => {
                                     highlyRecommended: true
                                 }
                             ].map((item, idx) => (
-                                <article key={idx} className={`p-10 rounded-[32px] border transition-all ${item.highlyRecommended ? 'bg-text-dark text-white border-transparent' : 'bg-white border-gray-100 hover:border-secondary'}`}>
+                                <article key={idx} className={`p-10 rounded-4xl border transition-all ${item.highlyRecommended ? 'bg-text-dark text-white border-transparent' : 'bg-white border-gray-100 hover:border-secondary'}`}>
                                     {item.recommended && <span className="bg-primary text-white text-[10px] font-black uppercase px-3 py-1 rounded-full mb-4 inline-block tracking-widest">Recommended</span>}
                                     {item.highlyRecommended && <span className="bg-secondary text-text-dark text-[10px] font-black uppercase px-3 py-1 rounded-full mb-4 inline-block tracking-widest">Highly Recommended</span>}
                                     <h3 className="text-2xl font-black mb-4">{item.title}</h3>
@@ -433,7 +433,7 @@ const TermiteClient = () => {
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10 text-white">
-                                <Link href="/appointment" className="btn-secondary !rounded-2xl !px-10">
+                                <Link href="/appointment" className="btn-secondary rounded-2xl px-10">
                                     Get Pricing For Your Property
                                 </Link>
                                 <Link href="/service" className="btn-outline border-2 border-white/20 hover:bg-white/10 px-10 py-3 rounded-2xl font-black transition-all">
@@ -449,7 +449,17 @@ const TermiteClient = () => {
     );
 };
 
-const PlanCard = ({ title, warranty, tag, features, popular = false, variant = 'light', isSpot = false }) => {
+interface PlanCardProps {
+    title: string;
+    warranty: string;
+    tag: string;
+    features: string[];
+    popular?: boolean;
+    variant?: 'light' | 'primary' | 'secondary';
+    isSpot?: boolean;
+}
+
+const PlanCard = ({ title, warranty, tag, features, popular = false, variant = 'light', isSpot = false }: PlanCardProps) => {
     const bgClass = variant === 'primary' ? 'bg-primary border-transparent' : variant === 'secondary' ? 'bg-secondary border-transparent' : 'bg-white/5 border-white/10';
     const textClass = variant === 'primary' || variant === 'secondary' ? 'text-text-dark' : 'text-white';
     const lightTextClass = variant === 'primary' || variant === 'secondary' ? 'text-text-dark/70' : 'text-gray-400';
@@ -474,7 +484,7 @@ const PlanCard = ({ title, warranty, tag, features, popular = false, variant = '
             </div>
 
             <ul className="space-y-4 mb-10 flex-1">
-                {features.map((feature, i) => (
+                {features.map((feature: string, i: number) => (
                     <li key={i} className={`flex items-start gap-3 text-sm font-bold ${textClass}`}>
                         <CheckCircle2 size={18} className={variant === 'light' ? 'text-primary' : 'text-text-dark'} aria-hidden="true" />
                         <span>{feature}</span>
@@ -489,7 +499,16 @@ const PlanCard = ({ title, warranty, tag, features, popular = false, variant = '
     );
 };
 
-const PipePlanCard = ({ title, warranty, ideal, features, color = 'gray', featured = false }) => {
+interface PipePlanCardProps {
+    title: string;
+    warranty: string;
+    ideal: string;
+    features: string[];
+    color?: 'primary' | 'secondary' | 'gray';
+    featured?: boolean;
+}
+
+const PipePlanCard = ({ title, warranty, ideal, features, color = 'gray', featured = false }: PipePlanCardProps) => {
     const colorMap = {
         primary: 'border-primary bg-primary/5',
         secondary: 'border-secondary bg-secondary/5',
@@ -518,7 +537,7 @@ const PipePlanCard = ({ title, warranty, ideal, features, color = 'gray', featur
             </div>
 
             <ul className="space-y-4 mb-10 flex-1">
-                {features.map((feature, i) => (
+                {features.map((feature: string, i: number) => (
                     <li key={i} className="flex items-start gap-3 text-sm font-bold text-text-dark">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" aria-hidden="true" />
                         <span>{feature}</span>
