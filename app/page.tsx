@@ -10,11 +10,14 @@ import FAQ from '@/components/home/FAQ';
 import Team from '@/components/home/Team';
 import Blog from '@/components/home/Blog';
 import Hero from '@/components/home/Hero';
+import RunningLine from '@/components/layout/RunningLine';
+// import RunningLine from '@/components/home/Hero';
 
 export default function Home() {
   return (
     <>
       <Header />
+      <RunningLine />
       <main>
         <Hero />
         <ServiceGrid />
